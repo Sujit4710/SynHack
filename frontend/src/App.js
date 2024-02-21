@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Stage from "./component/Stage";
 
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <>
+      <Stage />
+    </>
+  );
+};
 
-export default App
+export default App;
