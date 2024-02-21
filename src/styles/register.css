@@ -1,0 +1,26 @@
+.box{
+    margin: 10%;
+    border: 1px solid black;
+    display: flex;
+}
+
+.reg{
+    margin: 10%;
+    width: 60%;
+}
+
+.common{
+    margin-top: 7%;
+}
+.image{
+    width:50%;
+    height: 100%;
+}
+
+.head{
+    display: flex;
+}
+
+.text{
+    margin-top: 10%;
+}
