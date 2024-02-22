@@ -6,7 +6,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../services/firebase';
-
+// import TopBar from '../component/TopBar';
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -24,35 +24,35 @@ export default function Login() {
         }
     };
 
-
-
     return (
-        <div className='box'>
-            <img src={farmer} className='image'></img>
-            <div className='reg'>
-                <div className='head'>
-                    <img src={logo} className='image' alt="Logo" />
-                    <h3 className='text'>GreenHarvest Quiz</h3>
+        <div className='container'>
+            
+            <div className='box'>
+                <img src={farmer} className='image' alt="Farmer"></img>
+                <div className='reg'>
+                    <div className='head'>
+                        <img src={logo} className='image' alt="Logo" />
+                        <h3 className='text'>GreenHarvest Quiz</h3>
+                    </div>
+                    <h4>Welcome!!!</h4>
+                    <p>Sign in to enter the world of Sustainability</p>
+
+                    <FloatingLabel
+                        controlId="floatingInput"
+                        label="Email address"
+                        className="mb-3 common"
+                    >
+                        <Form.Control type="email" placeholder="name@example.com" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    </FloatingLabel>
+                    <FloatingLabel controlId="floatingPassword" label="Password">
+                        <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    </FloatingLabel>
+
+                    <button type="button" className="btn btn-success common" onClick={handleLogin}>
+                        Login
+                    </button>
                 </div>
-                <h4>Welcome!!!</h4>
-                <p>Sign in to enter the world of Sustainability</p>
-
-                <FloatingLabel
-                    controlId="floatingInput"
-                    label="Email address"
-                    className="mb-3 common"
-                >
-                    <Form.Control type="email" placeholder="name@example.com" value={email} onChange={(e) => setEmail(e.target.value)} />
-                </FloatingLabel>
-                <FloatingLabel controlId="floatingPassword" label="Password">
-                    <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                </FloatingLabel>
-
-                <button type="button" className="btn btn-success common" onClick={handleLogin}>
-                    Login
-                </button>
             </div>
         </div>
-
     );
 }
