@@ -45,5 +45,12 @@
   
   .main-page{
     display: flex;
+    
+  }
+  .quiz-container{
+    width: "70%";
+  }
+  .lifelines{
+    width: "30%";
   }
   
