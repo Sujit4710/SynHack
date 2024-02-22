@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import que from '../Question/Stage1.json';
 import Question from '../component/desque';
 import '../styles/Qizz.css';
-import fiftyFifty from '../assets/fifty_fifty.png'
-import flipQuestion from '../assets/flip_the_question.png'
-import askExpert from '../assets/ask_the_expert.png'
+import fiftyFifty from '../assets/fifty_fifty.png';
+import flipQuestion from '../assets/flip_the_question.png';
+import askExpert from '../assets/ask_the_expert.png';
+import { addDoc, collection, doc, setDoc } from 'firebase/firestore';
+import { firestore, auth } from '../services/firebase';
 export default function Quizz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -31,6 +33,40 @@ export default function Quizz() {
       setStopQuiz(true);
     }
   }, [currentQuestion]);
+  if (currentQuestion >= que.length) {
+    const handleQuizComplete = async () => {
+        // Get the current user ID
+        const userId = auth.currentUser.uid;
+
+        // Store the score in Firestore along with the user ID
+        try {
+            const scoresCollection = collection(firestore, 'scores');
+            const userScoreDocRef = doc(scoresCollection, userId);
+
+            // Check if the user already has a score document
+            const userScoreDocSnapshot = await userScoreDocRef.get();
+
+            if (userScoreDocSnapshot.exists()) {
+                // Update the existing document
+                await setDoc(userScoreDocRef, { score: score }, { merge: true });
+            } else {
+                // Create a new document for the user
+                await addDoc(userScoreDocRef, { score: score });
+            }
+
+            console.log('Score stored for user with ID: ', userId);
+        } catch (error) {
+            console.error('Error storing score:', error);
+        }
+    };
+    handleQuizComplete();
+    return (
+        <div>
+            <h2>Quiz completed!</h2>
+            <p>Your score: {score}</p>
+        </div>
+        );
+    }
 
   return (
     <div className='main-page'>
