@@ -2,8 +2,7 @@ import Register from './pages/register'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/login'
 import Stage from "./component/Stage";
-import Quizz from './pages/quzi';
-import TopBar from "./component/TopBar";
+
 
 function App() {
   return (
