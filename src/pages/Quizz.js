@@ -34,32 +34,44 @@ export default function Quizz() {
       setStopQuiz(true);
     }
   }, [currentQuestion]);
+  if (currentQuestion >= que.length) {
+    const handleQuizComplete = async () => {
+        // Get the current user ID
+        const userId = auth.currentUser.uid;
 
-  const handleQuizComplete = async () => {
-    // Store the score in Firestore
-    try {
-      const docRef = await addDoc(collection(firestore, 'scores'), {
-        score: score,
-      });
-      console.log('Score stored with ID: ', docRef.id);
-    } catch (error) {
-      console.error('Error storing score:', error);
-    }
-  };
+        // Store the score in Firestore along with the user ID
+        try {
+            const scoresCollection = collection(firestore, 'scores');
+            const userScoreDocRef = doc(scoresCollection, userId);
 
-if (currentQuestion >= que.length) {
+            // Check if the user already has a score document
+            const userScoreDocSnapshot = await userScoreDocRef.get();
 
-  handleQuizComplete();
+            if (userScoreDocSnapshot.exists()) {
+                // Update the existing document
+                await setDoc(userScoreDocRef, { score: score }, { merge: true });
+            } else {
+                // Create a new document for the user
+                await addDoc(userScoreDocRef, { score: score });
+            }
+
+            console.log('Score stored for user with ID: ', userId);
+        } catch (error) {
+            console.error('Error storing score:', error);
+        }
+    };
+    handleQuizComplete();
+    return (
+        <div>
+            <h2>Quiz completed!</h2>
+            <p>Your score: {score}</p>
+        </div>
+        );
+    }
+
   return (
-    <div>
-      <h2>Quiz completed!</h2>
-      <p>Your score: {score}</p>
-    </div>
-  );
-
-  }
-return (
-  <div className='main-page'>
+    <div className='h'>
+    <div className='main-page'>
     <div className="quiz-container">
       {stopQuiz ? (
         <div className="quiz-completed">
@@ -84,16 +96,17 @@ return (
       )}
     </div>
     <div className="lifelines">
-      <div className="lifeline">
-        <img src={fiftyFifty} alt="Fifty Fifty" />
-      </div>
-      <div className="lifeline">
-        <img src={flipQuestion} alt="Flip Question" />
-      </div>
-      <div className="lifeline">
-        <img src={askExpert} alt="Ask the Expert" />
-      </div>
+          <div className="lifeline">
+            <img src={fiftyFifty} alt="Fifty Fifty"/>
+          </div>
+          <div className="lifeline">
+            <img src={flipQuestion} alt="Flip Question"/>
+          </div>
+          <div className="lifeline">
+            <img src={askExpert} alt="Ask the Expert"/>
+          </div>
+        </div>
     </div>
-  </div>
-);
-          }
+    </div>
+  );
+}

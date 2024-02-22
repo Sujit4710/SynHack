@@ -2,10 +2,11 @@ import React from "react";
 import styles from "../styles/Stage.module.css";
 import Points from "./Points";
 import StageCard from "./StageCard";
-
+import TopBar from './TopBar'
 const Stage = () => {
   return (
     <>
+    <TopBar />
       <div className={styles["Stage"]}>
         <div>
           {" "}
