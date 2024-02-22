@@ -110,7 +110,7 @@ const RecipeReviewCard = () => {
             <CardMedia component="img" height="300" image={sustainability} alt="Sustainability" />
             <CardContent>
               <Typography variant="body2" color="text.secondary" align="center">
-                Unlock the importance of GreenHarvest quiz, where each stage cultivates a garden of sustainable wisdom! Navigate through land preparation to harvesting, fostering eco-awareness at every step. Because in this game, learning sustainability isn't just a score—it's sowing the seeds for a greener, brighter future.
+              Sustainability is like taking good care of our home, Earth. It's important because it keeps everything in balance, just like a well-orchestrated song. When we use resources wisely and treat nature kindly, we're making sure that the world stays healthy for us and for the people who will come after us. It's like being a good friend to our planet, making sure it stays happy and beautiful.
               </Typography>
             </CardContent>
           </boxFortext>
