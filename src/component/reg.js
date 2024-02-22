@@ -8,12 +8,14 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import '../styles/register.css';
 import logo from '../Images/logo.png';
+import { useNavigate } from 'react-router-dom';
 
 export default function Reg() {
   const [name, setName] = useState('');
   const [country, setCountry] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleRegistration = async () => {
     try {
@@ -30,6 +32,7 @@ export default function Reg() {
       });
 
       console.log('User registered successfully!');
+      navigate('/login');
     } catch (error) {
       console.error('Registration error:', error.message);
     }
@@ -39,9 +42,9 @@ export default function Reg() {
     <div className='reg'>
       <div className='head'>
         <img src={logo} className='image' alt="Logo" />
-        <h3 className='text'>GreenHarvest Quiz</h3>
+        <h4 className='text'>GreenHarvest Quiz</h4>
       </div>
-      <h4>Welcome!!!</h4>
+      <h5>Welcome!!!</h5>
       <p>Fill the registration form and enter to the world of Sustainability</p>
       <FloatingLabel controlId="floatingname" label="Name">
         <Form.Control type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
