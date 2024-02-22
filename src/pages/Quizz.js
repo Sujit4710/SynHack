@@ -7,6 +7,7 @@ import flipQuestion from '../assets/flip_the_question.png';
 import askExpert from '../assets/ask_the_expert.png';
 import { addDoc, collection, doc, setDoc } from 'firebase/firestore';
 import { firestore, auth } from '../services/firebase';
+
 export default function Quizz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -20,12 +21,12 @@ export default function Quizz() {
       setScore(score + 10);
     }
 
-    setAnswerSubmitted(true); 
+    setAnswerSubmitted(true);
   };
 
   const handleNextQuestion = () => {
     setCurrentQuestion(currentQuestion + 1);
-    setAnswerSubmitted(false); 
+    setAnswerSubmitted(false);
   };
 
   useEffect(() => {
@@ -33,43 +34,32 @@ export default function Quizz() {
       setStopQuiz(true);
     }
   }, [currentQuestion]);
-  if (currentQuestion >= que.length) {
-    const handleQuizComplete = async () => {
-        // Get the current user ID
-        const userId = auth.currentUser.uid;
 
-        // Store the score in Firestore along with the user ID
-        try {
-            const scoresCollection = collection(firestore, 'scores');
-            const userScoreDocRef = doc(scoresCollection, userId);
+  const handleQuizComplete = async () => {
+    // Store the score in Firestore
+    try {
+      const docRef = await addDoc(collection(firestore, 'scores'), {
+        score: score,
+      });
+      console.log('Score stored with ID: ', docRef.id);
+    } catch (error) {
+      console.error('Error storing score:', error);
+    }
+  };
 
-            // Check if the user already has a score document
-            const userScoreDocSnapshot = await userScoreDocRef.get();
+if (currentQuestion >= que.length) {
 
-            if (userScoreDocSnapshot.exists()) {
-                // Update the existing document
-                await setDoc(userScoreDocRef, { score: score }, { merge: true });
-            } else {
-                // Create a new document for the user
-                await addDoc(userScoreDocRef, { score: score });
-            }
-
-            console.log('Score stored for user with ID: ', userId);
-        } catch (error) {
-            console.error('Error storing score:', error);
-        }
-    };
-    handleQuizComplete();
-    return (
-        <div>
-            <h2>Quiz completed!</h2>
-            <p>Your score: {score}</p>
-        </div>
-        );
-    }
-
+  handleQuizComplete();
   return (
-    <div className='main-page'>
+    <div>
+      <h2>Quiz completed!</h2>
+      <p>Your score: {score}</p>
+    </div>
+  );
+
+  }
+return (
+  <div className='main-page'>
     <div className="quiz-container">
       {stopQuiz ? (
         <div className="quiz-completed">
@@ -94,16 +84,16 @@ export default function Quizz() {
       )}
     </div>
     <div className="lifelines">
-          <div className="lifeline">
-            <img src={fiftyFifty} alt="Fifty Fifty"/>
-          </div>
-          <div className="lifeline">
-            <img src={flipQuestion} alt="Flip Question"/>
-          </div>
-          <div className="lifeline">
-            <img src={askExpert} alt="Ask the Expert"/>
-          </div>
-        </div>
+      <div className="lifeline">
+        <img src={fiftyFifty} alt="Fifty Fifty" />
+      </div>
+      <div className="lifeline">
+        <img src={flipQuestion} alt="Flip Question" />
+      </div>
+      <div className="lifeline">
+        <img src={askExpert} alt="Ask the Expert" />
+      </div>
     </div>
-  );
-}
+  </div>
+);
+          }
