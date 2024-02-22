@@ -2,13 +2,7 @@ import React from "react";
 import styles from "../styles/StageCard.module.css";
 
 import {
-    Alert,
-    AlertTitle,
-    LinearProgress,
-    Snackbar,
     Tooltip,
-    Typography,
-    linearProgressClasses,
     tooltipClasses,
   } from "@mui/material";
 
