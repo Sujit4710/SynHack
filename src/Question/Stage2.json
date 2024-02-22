@@ -1,0 +1,79 @@
+[
+    {
+      "question": "What is the primary purpose of crop rotation in sustainable farming?",
+      "options": [
+        "A. To improve soil structure and fertility",
+        "B. To reduce the dependency on chemical fertilizers",
+        "C. To prevent the build-up of pathogens and pests",
+        "D. All of the above"
+      ],
+      "correct_answer": "D. All of the above",
+      "description": "Crop rotation is a practice used to improve soil structure, reduce dependency on chemical inputs, and prevent the accumulation of pathogens and pests that often occurs when one species is continuously planted."
+    },
+    {
+      "question": "Which technology is commonly used for precision planting?",
+      "options": [
+        "A. Global Positioning System (GPS)",
+        "B. Radio-Frequency Identification (RFID)",
+        "C. Light Detection and Ranging (LiDAR)",
+        "D. Manual mapping"
+      ],
+      "correct_answer": "A. Global Positioning System (GPS)",
+      "description": "GPS technology is widely used in precision planting to ensure seeds are sown at the correct location and spacing, optimizing plant growth and resource use."
+    },
+    {
+      "question": "What is a key benefit of using drones in agricultural monitoring?",
+      "options": [
+        "A. Increasing water usage",
+        "B. Reducing labor costs",
+        "C. Replacing manual harvesting",
+        "D. Enhancing crop dusting"
+      ],
+      "correct_answer": "B. Reducing labor costs",
+      "description": "Drones can cover large areas quickly and collect data efficiently, reducing the need for manual labor in monitoring crops and thus reducing labor costs."
+    },
+    {
+      "question": "Which of the following is NOT a benefit of using soil moisture sensors?",
+      "options": [
+        "A. Preventing over-irrigation",
+        "B. Detecting plant diseases early",
+        "C. Optimizing water usage",
+        "D. Increasing seed germination rates"
+      ],
+      "correct_answer": "B. Detecting plant diseases early",
+      "description": "Soil moisture sensors are primarily used to optimize irrigation by preventing over- or under-watering, but they do not directly detect plant diseases."
+    },
+    {
+      "question": "What does NDVI stand for and why is it important in precision agriculture?",
+      "options": [
+        "A. Normalized Difference Vegetation Index, it measures plant stress",
+        "B. Nutrient Deficiency Vision Indicator, it detects soil nutrient levels",
+        "C. Normalized Difference Vegetation Index, it indicates vegetation health",
+        "D. Nutrient Deficiency Vision Indicator, it measures plant growth"
+      ],
+      "correct_answer": "C. Normalized Difference Vegetation Index, it indicates vegetation health",
+      "description": "NDVI, or Normalized Difference Vegetation Index, is a measure derived from remote sensing that indicates the health and vigor of vegetation by comparing the difference between near-infrared (which vegetation strongly reflects) and visible light (which vegetation absorbs)."
+    },
+    {
+      "question": "In the context of smart farming, what is the role of machine learning?",
+      "options": [
+        "A. To replace human farmers with robots",
+        "B. To predict crop yields and detect anomalies",
+        "C. To control the price of crops in the market",
+        "D. To genetically modify crops"
+      ],
+      "correct_answer": "B. To predict crop yields and detect anomalies",
+      "description": "Machine learning in smart farming is used to analyze data collected from various sources to predict crop yields, detect anomalies, and provide insights for decision-making, not to replace human labor or control market prices."
+    },
+    {
+      "question": "What is the significance of multispectral imaging in plant health monitoring, and how does it differ from traditional imaging?",
+      "options": [
+        "A. It captures images in multiple spectra to detect plant stress invisible to the naked eye",
+        "B. It uses a single spectrum to provide clearer images than traditional cameras",
+        "C. It is a cheaper alternative to traditional imaging",
+        "D. It provides 3D models of plants for better visualization"
+      ],
+      "correct_answer": "A. It captures images in multiple spectra to detect plant stress invisible to the naked eye",
+      "description": "Multispectral imaging captures data at specific frequencies across the electromagnetic spectrum, including wavelengths not visible to the naked eye. This allows for the detection of plant stress, disease, and nutrient deficiencies before they are visible to the naked eye, unlike traditional imaging which captures only visible light."
+    }
+  ]

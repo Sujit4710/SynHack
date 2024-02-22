@@ -1,0 +1,79 @@
+[
+    {
+      "question": "What is the first step in integrated pest management (IPM)?",
+      "options": [
+        "A. Application of pesticides",
+        "B. Identification of pests",
+        "C. Introduction of natural predators",
+        "D. Crop rotation"
+      ],
+      "correct_answer": "B. Identification of pests",
+      "description": "The first step in integrated pest management is the correct identification of pests to ensure that control methods are appropriate and effective for the specific pest problem."
+    },
+    {
+      "question": "Which of these is a biological control method for crop protection?",
+      "options": [
+        "A. Chemical fungicides",
+        "B. Insecticidal soap",
+        "C. Bacillus thuringiensis (Bt)",
+        "D. Ultraviolet light barriers"
+      ],
+      "correct_answer": "C. Bacillus thuringiensis (Bt)",
+      "description": "Bacillus thuringiensis (Bt) is a naturally occurring bacterium that is used as a biological control agent to kill certain insects, making it an environmentally friendly alternative to chemical pesticides."
+    },
+    {
+      "question": "What is the main advantage of using precision agriculture technologies for crop protection?",
+      "options": [
+        "A. They eliminate the need for manual labor",
+        "B. They ensure 100% pest eradication",
+        "C. They reduce the amount of chemicals used",
+        "D. They increase the speed of harvesting"
+      ],
+      "correct_answer": "C. They reduce the amount of chemicals used",
+      "description": "Precision agriculture technologies allow for targeted application of pesticides, reducing the overall amount of chemicals used, which is beneficial for the environment and can also reduce costs."
+    },
+    {
+      "question": "What is the role of harvesters equipped with yield monitors?",
+      "options": [
+        "A. To track the quantity of crop harvested in real-time",
+        "B. To spray pesticides evenly across the field",
+        "C. To irrigate crops automatically",
+        "D. To plant seeds with precision"
+      ],
+      "correct_answer": "A. To track the quantity of crop harvested in real-time",
+      "description": "Yield monitors on harvesters track the quantity of crop that is being harvested in real-time, providing valuable data that can be used to assess the performance of different field areas and to make informed decisions for future planting."
+    },
+    {
+      "question": "Which technology is crucial for precision harvesting?",
+      "options": [
+        "A. Drones",
+        "B. GPS",
+        "C. RFID tags",
+        "D. Satellite imagery"
+      ],
+      "correct_answer": "B. GPS",
+      "description": "GPS technology is crucial for precision harvesting as it allows for the accurate navigation of harvesting equipment, ensuring that crops are harvested efficiently and with minimal waste."
+    },
+    {
+      "question": "How does remote sensing contribute to crop protection?",
+      "options": [
+        "A. By providing real-time weather data",
+        "B. By detecting areas of plant stress or disease",
+        "C. By automating the harvesting process",
+        "D. By controlling the farm's microclimate"
+      ],
+      "correct_answer": "B. By detecting areas of plant stress or disease",
+      "description": "Remote sensing technology can detect variations in plant health, indicating areas of stress or disease before they may be visible to the naked eye, allowing for timely and targeted interventions."
+    },
+    {
+      "question": "What is the significance of autosteer systems in modern combine harvesters?",
+      "options": [
+        "A. They reduce fuel consumption by optimizing driving patterns",
+        "B. They allow for 24/7 harvesting operations",
+        "C. They ensure straight and precise driving to minimize crop damage",
+        "D. They automatically adjust the combine settings for different crops"
+      ],
+      "correct_answer": "C. They ensure straight and precise driving to minimize crop damage",
+      "description": "Autosteer systems in combine harvesters use GPS technology to ensure straight and precise driving patterns, which minimizes crop damage and overlap during harvesting, leading to increased efficiency and reduced operational costs."
+    }
+  ]

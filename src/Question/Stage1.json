@@ -1,79 +1,79 @@
 [
     {
         "question": "What is the primary goal of land preparation before planting?",
-        "options": {
-            "A": "To decorate the field",
-            "B": "To ensure proper soil aeration",
-            "C": "To remove weeds only",
-            "D": "To level the land"
-        },
-        "correct_answer": "B",
+        "options": [
+            "A. To decorate the field",
+            "B. To ensure proper soil aeration",
+            "C. To remove weeds only",
+            "D. To level the land"
+        ],
+        "correct_answer": "B. To ensure proper soil aeration",
         "description": "The primary goal of land preparation is to ensure proper soil aeration which is crucial for optimal plant growth. It involves plowing, leveling, and sometimes applying amendments to create the best possible growing conditions for seeds."
     },
     {
         "question": "Which of the following is NOT a method of land preparation?",
-        "options": {
-            "A": "Plowing",
-            "B": "Harrowing",
-            "C": "Broadcasting",
-            "D": "Ridging"
-        },
-        "correct_answer": "C",
+        "options": [
+            "A. Plowing",
+            "B. Harrowing",
+            "C. Broadcasting",
+            "D. Ridging"
+        ],
+        "correct_answer": "C. Broadcasting",
         "description": "Broadcasting is a method of seed sowing where seeds are spread over the land rather than a land preparation technique. Plowing, harrowing, and ridging are all methods used to prepare the land for planting."
     },
     {
         "question": "What is the significance of selecting certified seeds for planting?",
-        "options": {
-            "A": "They are cheaper than other seeds",
-            "B": "They guarantee a specific color of flowers",
-            "C": "They ensure genetic purity and high germination rates",
-            "D": "They require less water to grow"
-        },
-        "correct_answer": "C",
+        "options": [
+            "A. They are cheaper than other seeds",
+            "B. They guarantee a specific color of flowers",
+            "C. They ensure genetic purity and high germination rates",
+            "D. They require less water to grow"
+        ],
+        "correct_answer": "C. They ensure genetic purity and high germination rates",
         "description": "Certified seeds are important because they ensure genetic purity and high germination rates, which are crucial for achieving optimal yields. These seeds have been tested and are less likely to carry diseases."
     },
     {
         "question": "Which factor is least important when selecting seeds for a high-yield crop?",
-        "options": {
-            "A": "Seed germination rate",
-            "B": "Seed color",
-            "C": "Disease resistance of the seed",
-            "D": "Adaptability of the seed to local climate"
-        },
-        "correct_answer": "B",
+        "options": [
+            "A. Seed germination rate",
+            "B. Seed color",
+            "C. Disease resistance of the seed",
+            "D. Adaptability of the seed to local climate"
+        ],
+        "correct_answer": "B. Seed color",
         "description": "Seed color is generally the least important factor when selecting seeds for high-yield crops. Factors like germination rate, disease resistance, and adaptability to local climate are much more critical for crop success."
     },
     {
         "question": "What is the term for the practice of growing a sequence of different crops on the same land?",
-        "options": {
-            "A": "Monoculture",
-            "B": "Polyculture",
-            "C": "Crop rotation",
-            "D": "Intercropping"
-        },
-        "correct_answer": "C",
+        "options": [
+            "A. Monoculture",
+            "B. Polyculture",
+            "C. Crop rotation",
+            "D. Intercropping"
+        ],
+        "correct_answer": "C. Crop rotation",
         "description": "Crop rotation is the practice of growing a sequence of different crops on the same land to improve soil health and reduce pest and disease problems. It is not directly related to land preparation or seed selection but affects both."
     },
     {
         "question": "Which soil characteristic is not typically improved by proper land preparation?",
-        "options": {
-            "A": "Soil texture",
-            "B": "Soil structure",
-            "C": "Soil fertility",
-            "D": "Soil pH"
-        },
-        "correct_answer": "A",
+        "options": [
+            "A. Soil texture",
+            "B. Soil structure",
+            "C. Soil fertility",
+            "D. Soil pH"
+        ],
+        "correct_answer": "A. Soil texture",
         "description": "Soil texture, which is determined by the proportion of sand, silt, and clay, is a characteristic that is inherent to the soil and not typically altered by land preparation. Land preparation usually improves soil structure, fertility, and pH."
     },
     {
         "question": "In seed selection, what is the term for the ability of a seed to perform well across a wide range of environmental conditions?",
-        "options": {
-            "A": "Specificity",
-            "B": "Homogeneity",
-            "C": "Stability",
-            "D": "Plasticity"
-        },
-        "correct_answer": "D",
+        "options": [
+            "A. Specificity",
+            "B. Homogeneity",
+            "C. Stability",
+            "D. Plasticity"
+        ],
+        "correct_answer": "D. Plasticity",
         "description": "Plasticity refers to the ability of a seed (or plant) to perform well across a wide range of environmental conditions. This trait is desirable for seeds to ensure that they can adapt to varying conditions and still produce a good yield."
     }
 ]
