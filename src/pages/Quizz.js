@@ -69,6 +69,7 @@ export default function Quizz() {
     }
 
   return (
+    <div className='h'>
     <div className='main-page'>
     <div className="quiz-container">
       {stopQuiz ? (
@@ -104,6 +105,7 @@ export default function Quizz() {
             <img src={askExpert} alt="Ask the Expert"/>
           </div>
         </div>
+    </div>
     </div>
   );
 }
