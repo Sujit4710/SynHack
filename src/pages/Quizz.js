@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import que from '../Question/Stage1.json';
+
 import Question from '../component/desque';
 import '../styles/Qizz.css';
 import fiftyFifty from '../assets/fifty_fifty.png';
@@ -7,7 +7,7 @@ import flipQuestion from '../assets/flip_the_question.png';
 import askExpert from '../assets/ask_the_expert.png';
 import { addDoc, collection, doc, setDoc } from 'firebase/firestore';
 import { firestore, auth } from '../services/firebase';
-export default function Quizz() {
+export default function Quizz({que}) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [stopQuiz, setStopQuiz] = useState(false);
@@ -32,13 +32,13 @@ export default function Quizz() {
     if (currentQuestion >= que.length) {
       setStopQuiz(true);
     }
-  }, [currentQuestion]);
+  }, [currentQuestion,que.length]);
   if (currentQuestion >= que.length) {
     const handleQuizComplete = async () => {
-        // Get the current user ID
+   
         const userId = auth.currentUser.uid;
 
-        // Store the score in Firestore along with the user ID
+       
         try {
             const scoresCollection = collection(firestore, 'scores');
             const userScoreDocRef = doc(scoresCollection, userId);
