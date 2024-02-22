@@ -41,7 +41,7 @@ export default function Reg() {
   return (
     <div className='reg'>
       <div className='head'>
-        <img src={logo} className='image' alt="Logo" />
+        <img src={logo} className='img1' alt="Logo" />
         <h4 className='text'>GreenHarvest Quiz</h4>
       </div>
       <h5>Welcome!!!</h5>

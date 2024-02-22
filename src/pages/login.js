@@ -31,7 +31,7 @@ export default function Login() {
             <img src={farmer} className='image'></img>
             <div className='reg'>
                 <div className='head'>
-                    <img src={logo} className='image' alt="Logo" />
+                    <img src={logo} className='img1' alt="Logo" />
                     <h3 className='text'>GreenHarvest Quiz</h3>
                 </div>
                 <h4>Welcome!!!</h4>
