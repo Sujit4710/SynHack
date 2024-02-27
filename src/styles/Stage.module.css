@@ -38,3 +38,31 @@
     padding: 5px 10px;
     transition: all 0.2s;
   }
+
+  .btn-rewards {
+    width: 400px;
+    height: 65px;
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: Poppins;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    margin: 50px 10px;
+    background-color: #195f43;
+    border-radius: 10px;
+    padding: 5px 10px;
+    transition: all 0.2s;
+  }
+
+  .btn-rewards:hover{
+    transform: scale(1.1);
+  }
+
+  .modal-content.completed {
+    /* Add styles to visually indicate completion, for example, changing opacity */
+    opacity: 0.7;
+    /* You can add more styles as needed */
+  }

@@ -10,12 +10,17 @@ import Quizz from "../pages/Quizz";
 import QModal from "./QModal";
 import TopBar from "./TopBar";
 
+
 const Stage = () => {
   const [detail, setDetail] = React.useState(false);
   const [points,setPoints] = React.useState(0)
   const navigate = useNavigate();
   console.log("he",que1);
  
+  const handle_rewards = () =>{
+    navigate('/rewards')
+  }
+
   return (
     <>
       {detail ? (
@@ -35,9 +40,9 @@ const Stage = () => {
             </button>
           </div>
 
-<div>
+{/* <div>
   <Analysis/>
-</div>
+</div> */}
           
         </div>
       ) : (
@@ -50,9 +55,9 @@ const Stage = () => {
           <div
             style={{
               display: "flex",
-              flexDirection: "col",
-              justifyContent: "space-around",
-              marginTop: "50px",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              margin: "30px 350px",
             }}
           >
       
@@ -88,6 +93,12 @@ const Stage = () => {
               flexDirection: "row",
             }}
           >
+            <button
+              className={styles["btn-rewards"]}
+              onClick={handle_rewards}
+            >
+              Rewards
+            </button>
             {" "}
             {/* <button
                onClick={() => setDetail(true)}

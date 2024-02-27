@@ -15,6 +15,7 @@ class RewardsPage extends React.Component {
     if (this.state.points >= cost) {
       this.setState({ points: this.state.points - cost });
       alert('Reward redeemed successfully!');
+      window.location.href = 'https://www.syngenta-us.com/';
     } else {
       alert('Not enough points to redeem this reward.');
     }

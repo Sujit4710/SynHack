@@ -17,7 +17,7 @@ const Analysis = () => {
           style={{
             display: "flex",
             flexDirection: "col",
-            marginTop: "50px",
+            margin: "50px 200px",
           }}
         >
 <div style={{width:"50%"}}>
