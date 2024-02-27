@@ -11,9 +11,9 @@ import QModal from "./QModal";
 import TopBar from "./TopBar";
 
 
-const Stage = () => {
+const Stage = ({points,setPoints}) => {
   const [detail, setDetail] = React.useState(false);
-  const [points, setPoints] = React.useState(0);
+
   const navigate = useNavigate();
   console.log("he",que1);
  

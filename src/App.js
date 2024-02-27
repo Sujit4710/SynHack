@@ -9,6 +9,7 @@ import RecipeReviewCard from './pages/landing';
 import RewardsPage from './pages/Rewards';
 
 function App() {
+  const [points, setPoints] = React.useState(0);
   return (
     <>
     
@@ -17,9 +18,11 @@ function App() {
         <Route path='/' element={<RecipeReviewCard/>}/>
         <Route path="/register" element={<Register/>} />
         <Route path="/login" element={<Login/>} />
-        <Route path="/stage" element={<Stage/>} />
+        <Route path="/stage" element={<Stage  points={points}
+              setPoints={setPoints}/>} />
         <Route path="/home" element={  <TopBar />} />
-        <Route path="/rewards" element={<RewardsPage/>}/>
+        <Route path="/rewards" element={<RewardsPage  points={points}
+              setPoints={setPoints}/>}/>
         <Route path="/quizz" element={<Quizz/>}/>
 
       </Routes>

@@ -1,19 +1,19 @@
 import React from 'react';
 class RewardsPage extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor({points,setPoints}) {
+    super({points,setPoints});
     this.state = {
-      points: 1000, // Example points the user has
+      points: points, // Example points the user has
       rewards: [
-        { id: 1, name: '10% Discount Coupon', cost: 500 },
-        { id: 2, name: 'Free Product Sample', cost: 800 },
-        { id: 3, name: 'Free Shipping for a Month', cost: 1000 },
+        { id: 1, name: '10% Discount Coupon', cost: 50 },
+        { id: 2, name: 'Free Product Sample', cost: 80 },
+        { id: 3, name: 'Free Shipping for a Month', cost: 100 },
       ],
     };
   }
   redeemReward = (cost) => {
     if (this.state.points >= cost) {
-      this.setState({ points: this.state.points - cost });
+      this.setPoints({ points: this.state.points - cost });
       alert('Reward redeemed successfully!');
       window.location.href = 'https://www.syngenta-us.com/';
     } else {
