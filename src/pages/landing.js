@@ -73,9 +73,12 @@ const LevelCard = styled('div')({
 });
 
 const StyledButton = styled(Button)({
-  backgroundColor: 'darkgreen',
+  backgroundColor: 'rgba(0, 100, 0, 1)', 
   color: 'white',
   marginTop: '16px',
+  '&:hover': {
+    backgroundColor: 'rgba(0, 100, 0, 0.8)', 
+  },
 });
 
 // Data for game levels
