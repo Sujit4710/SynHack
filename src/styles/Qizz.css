@@ -33,7 +33,7 @@
   }
   
   .option-item {
-    background-color: #e0e0e0;
+    
     padding: 10px;
     margin: 5px;
     cursor: pointer;
@@ -42,7 +42,6 @@
   }
   
   .option-item:hover {
-    background-color: #c0c0c0;
   }
   
   .main-page{
@@ -109,7 +108,9 @@
   }
   
   .answer-feedback button {
-    background-color: #4caf50;
+    background-color: #5043b3;
+    justify-content: center;
+    display: flex;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -118,9 +119,6 @@
     transition: background-color 0.3s ease-in-out;
   }
   
-  .answer-feedback button:hover {
-    background-color: #45a049;
-  }
   
   .lifelines {
     width: 30%; 

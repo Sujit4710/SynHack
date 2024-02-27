@@ -1,5 +1,5 @@
 import React from 'react';
-
+import styles from '../styles/Desque.module.css'
 
 const Question = ({ question, options, handleAnswer }) => {
   console.log("hi", options);
@@ -9,7 +9,9 @@ const Question = ({ question, options, handleAnswer }) => {
       <ul className="options-list">
         {options.map((option, index) => (
           <li key={index} onClick={() => handleAnswer(option)} className="option-item">
-            {option}
+            <div > {option} 
+            </div>
+          
           </li>
         ))}
       </ul>
