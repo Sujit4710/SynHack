@@ -17,6 +17,7 @@ export default function Reg() {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
+
   const handleRegistration = async () => {
     try {
       // Create user account
@@ -29,6 +30,7 @@ export default function Reg() {
         userId: userId,
         name: name,
         country: country,
+        Score:0
       });
 
       console.log('User registered successfully!');

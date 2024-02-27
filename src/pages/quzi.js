@@ -45,27 +45,26 @@ export default function Quizz() {
                 console.error('Error storing score:', error);
             }
         };
-
-        if (currentQuestion >= data.length) {
-            // Quiz completed, handle completion logic
-            handleQuizComplete();
-            return (
-                <div>
-                    <h2>Quiz completed!</h2>
-                    <p>Your score: {score}</p>
-                </div>
-            );
-            
-        }
-
+        handleQuizComplete();
         return (
-
-            <Question
-                question={que[currentQuestion].question}
-                options={que[currentQuestion].options}
-                correctOption={que[currentQuestion].correct_answer}
-                handleAnswer={handleAnswer}
-            />
-
+            <div>
+                <h2>Quiz completed!</h2>
+                <p>Your score: {score}</p>
+            </div>
         );
-    } }
+    }
+
+
+
+
+    return (
+
+        <Question
+            question={que[currentQuestion].question}
+            options={que[currentQuestion].options}
+            correctOption={que[currentQuestion].correct_answer}
+            handleAnswer={handleAnswer}
+        />
+
+    );
+} 
