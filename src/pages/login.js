@@ -28,6 +28,8 @@ export default function Login() {
     };
 
     return (
+        <>
+        <TopBar/>
         <div className='container'>
             
             <div className='box'>
@@ -57,5 +59,7 @@ export default function Login() {
                 </div>
             </div>
         </div>
+        </>
+        
     );
 }

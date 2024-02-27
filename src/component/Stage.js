@@ -4,6 +4,7 @@ import Points from "./Points";
 import StageCard from "./StageCard";
 import { Button } from "@mui/material";
 import Analysis from "./Analysis";
+<<<<<<< Updated upstream
 import que1 from "../Question/Stage1.json";
 import { useNavigate } from 'react-router-dom';
 import Quizz from "../pages/Quizz";
@@ -15,6 +16,11 @@ const Stage = () => {
   const navigate = useNavigate();
   console.log("he",que1);
  
+=======
+
+const Stage = () => {
+  const [detail, setDetail] = React.useState(false);
+>>>>>>> Stashed changes
   return (
     <>
       {detail ? (
@@ -43,7 +49,11 @@ const Stage = () => {
         <div className={styles["Stage"]}>
           <div>
             {" "}
+<<<<<<< Updated upstream
             <Points points={points} />
+=======
+            <Points />
+>>>>>>> Stashed changes
           </div>
 
           <div
@@ -54,6 +64,7 @@ const Stage = () => {
               marginTop: "50px",
             }}
           >
+<<<<<<< Updated upstream
       
             <QModal content={ <StageCard
               heading="Stage 1"
@@ -77,6 +88,26 @@ const Stage = () => {
             />
           } que = "3" points={points} setPoints={setPoints} />
           
+=======
+            <StageCard
+              heading="Stage 1"
+              text="Land preparation & seed Selection."
+              description="asff"
+              placement="right"
+            />
+            <StageCard
+              heading="Stage 2"
+              text="Planting & Monitoring"
+              description="asff"
+              placement="right"
+            />
+            <StageCard
+              heading="Stage 3"
+              text="Crop protection & harvesting"
+              description="asff"
+              placement="left"
+            />
+>>>>>>> Stashed changes
           </div>
 
           <div
@@ -88,12 +119,20 @@ const Stage = () => {
             }}
           >
             {" "}
+<<<<<<< Updated upstream
             {/* <button
+=======
+            <button
+>>>>>>> Stashed changes
                onClick={() => setDetail(true)}
               className={styles["btn-right"]}
             >
               Detailed Analysis
+<<<<<<< Updated upstream
             </button> */}
+=======
+            </button>
+>>>>>>> Stashed changes
           </div>
         </div>
       )}
