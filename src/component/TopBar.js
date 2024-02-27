@@ -6,13 +6,23 @@ import Button from '@mui/material/Button';
 import styles from "../styles/TopBar.module.css";
 import leaves from '../Images/leaves.jpg';
 import logo from '../Images/logo.png';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const ButtonAppBar = () => {
+  const navigate = useNavigate();  // Use the useNavigate hook to get the navigate function
+
+  const handleLoginClick = () => {
+    navigate('/login');  // Call navigate function with the desired path
+  };
+  const handleRegClick = () => {
+    navigate('/register');  // Call navigate function with the desired path
+  };
   const appBarStyle = {
-    backgroundImage: `url(${leaves})`,
+    backgroundImage: 'linear-gradient(90deg, rgb(109, 192, 190),rgb(11, 73, 25))',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   };
+
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -26,8 +36,8 @@ const ButtonAppBar = () => {
               </div>
             </div>
             <div style={{ display: "flex" }} className={styles.text}>
-              <Button color="inherit">Login</Button>
-              <Button color="inherit">Sign Up</Button>
+              <Button color="inherit" onClick={handleLoginClick}>Login</Button>
+              <Button color="inherit" onClick={handleRegClick}>Sign Up</Button>
             </div>
           </div>
         </Toolbar>

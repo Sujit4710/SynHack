@@ -6,9 +6,11 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../services/firebase';
-// import TopBar from '../component/TopBar';
+import { useNavigate } from 'react-router-dom';
+import TopBar from '../component/TopBar';
 
 export default function Login() {
+    const navigate=useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -17,6 +19,7 @@ export default function Login() {
             // Sign in user using Firebase
             await signInWithEmailAndPassword(auth, email, password);
             console.log('Login successful!');
+            navigate('/stage')
             // Redirect or perform other actions after successful login
         } catch (error) {
             console.error('Login error:', error.message);
@@ -25,6 +28,8 @@ export default function Login() {
     };
 
     return (
+        <>
+        <TopBar/>
         <div className='container'>
             
             <div className='box'>
@@ -54,5 +59,7 @@ export default function Login() {
                 </div>
             </div>
         </div>
+        </>
+        
     );
 }

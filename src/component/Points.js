@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/Points.module.css";
-const Points = () => {
+const Points = ({points}) => {
   return (
     <div className={styles.mainbox}>
       <div
@@ -11,7 +11,7 @@ const Points = () => {
         }}
         className={styles.mainCard}
       >
-        <div className={styles.mainPoints}>42</div>
+        <div className={styles.mainPoints}>{points}</div>
         <div className={styles.mainHeading}>Total Points</div>
       </div>
     </div>
