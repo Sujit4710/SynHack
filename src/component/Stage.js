@@ -8,6 +8,7 @@ import que1 from "../Question/Stage1.json";
 import { useNavigate } from "react-router-dom";
 import Quizz from "../pages/Quizz";
 import QModal from "./QModal";
+import TopBar from "./TopBar";
 
 const Stage = () => {
   const [detail, setDetail] = React.useState(false);
